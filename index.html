@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="JERA簡易診断LP。5つの質問で、介護・病院勤務経験を活かした日本でのキャリアタイプを診断します。"
+    />
+    <title>JERAキャリアタイプ診断</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" id="homeLink" href="#top" aria-label="JERA">
+        <span class="brand-mark">J</span>
+        <span>JERA</span>
+      </a>
+      <label class="language-control">
+        <span data-i18n="header.language">言語</span>
+        <select id="languageSelect" aria-label="言語">
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+          <option value="my">မြန်မာ</option>
+          <option value="id">Bahasa Indonesia</option>
+        </select>
+      </label>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="viewIntro">
+        <div class="hero-inner">
+          <div class="hero-copy-block">
+            <p class="eyebrow" data-i18n="hero.eyebrow">介護・病院経験者向け</p>
+            <h1 data-i18n="hero.title">あなたはどのキャリアタイプ？</h1>
+            <p class="hero-copy" data-i18n="hero.subtitle">
+              5つの質問で、日本での働き方や給与アップのヒントを気軽にチェックできます。
+            </p>
+            <button class="primary-action" id="startButton" type="button" data-i18n="hero.startButton">
+              タイプ診断をしてみる
+            </button>
+          </div>
+          <div class="mascot-stage" aria-hidden="true">
+            <div class="speech-bubble" data-i18n="hero.bubble">1分でチェックできます</div>
+            <img src="./assets/daruma-base.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-panel hidden" id="viewQuiz" aria-live="polite">
+        <div class="panel-mascot" aria-hidden="true">
+          <img src="./assets/daruma-pink.png" alt="" />
+          <span data-i18n="quiz.helper">直感で選んでOKです</span>
+        </div>
+        <div class="quiz-topline">
+          <p class="eyebrow" data-i18n="quiz.label">キャリアタイプ診断</p>
+          <p id="progressText" class="progress-label"></p>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <span id="progressBar"></span>
+        </div>
+        <h2 id="questionText"></h2>
+        <div class="answer-list" id="answerList"></div>
+      </section>
+
+      <section class="section-panel hidden" id="viewCalculating" aria-live="polite">
+        <div class="panel-mascot panel-mascot-large" aria-hidden="true">
+          <img src="./assets/daruma-pink.png" alt="" />
+        </div>
+        <p class="eyebrow" data-i18n="calculating.label">診断中</p>
+        <h2 data-i18n="calculating.title">あなたに合うタイプを見ています。</h2>
+        <p data-i18n="calculating.copy">経験や希望に合わせて、結果をまとめています。</p>
+        <div class="loading-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      </section>
+
+      <section class="section-panel hidden" id="viewResult">
+        <div class="panel-mascot" aria-hidden="true">
+          <img src="./assets/daruma-pink.png" alt="" />
+          <span data-i18n="result.helper">結果が出ました</span>
+        </div>
+        <p class="eyebrow" data-i18n="result.label">診断結果</p>
+        <h2 id="resultTitle"></h2>
+        <p id="resultLead" class="result-lead"></p>
+        <div class="daruma-result" id="darumaResult">
+          <div class="daruma-portrait">
+            <img id="darumaImage" src="./assets/daruma-pink.png" alt="" />
+          </div>
+          <div>
+            <p class="daruma-kicker" data-i18n="result.darumaKicker">あなたのダルマカラー</p>
+            <h3 id="darumaTitle"></h3>
+            <p id="darumaCopy"></p>
+          </div>
+        </div>
+        <div class="result-grid">
+          <article>
+            <h3 data-i18n="result.strengthsTitle">あなたの良いところ</h3>
+            <ul id="strengthList"></ul>
+          </article>
+          <article>
+            <h3 data-i18n="result.cautionsTitle">相談前に見るポイント</h3>
+            <ul id="cautionList"></ul>
+          </article>
+        </div>
+        <div class="messenger-box">
+          <p id="messengerInstruction"></p>
+          <div class="result-code" id="resultCode" role="status"></div>
+          <div class="result-actions">
+            <button class="secondary-action" id="copyResultButton" type="button" data-i18n="result.copyButton">
+              結果をコピー
+            </button>
+            <a class="primary-action" id="messengerLink" href="#" target="_blank" rel="noopener" data-i18n="result.messengerButton">
+              Messengerで聞いてみる
+            </a>
+          </div>
+        </div>
+        <button class="text-action" id="restartButton" type="button" data-i18n="result.restartButton">もう一度診断する</button>
+      </section>
+
+      <section class="notes-band">
+        <div>
+          <p class="eyebrow" data-i18n="trust.eyebrow">はじめてでも大丈夫</p>
+          <h2 data-i18n="trust.title">経験を、次の働き方につなげる診断です。</h2>
+          <p data-i18n="trust.copy">
+            介護・病院での勤務経験、日本語レベル、希望条件を整理して、日本でのキャリア相談につなげます。
+          </p>
+        </div>
+        <ul>
+          <li data-i18n="trust.item1">入力はかんたん</li>
+          <li data-i18n="trust.item2">結果はその場で表示</li>
+          <li data-i18n="trust.item3">Messengerで相談可能</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small data-i18n="footer.notice">この診断は簡易診断です。正式な条件は面談時に確認します。</small>
+      <a href="#" data-i18n="footer.privacy">プライバシーポリシー</a>
+    </footer>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
