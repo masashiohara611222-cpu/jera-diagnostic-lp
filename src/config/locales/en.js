@@ -1,11 +1,16 @@
 export default {
   header: { language: "Language" },
   hero: {
-    eyebrow: "For care and hospital workers",
-    title: "What is your career type?",
-    subtitle: "Answer 5 quick questions to find hints for work style and salary growth in Japan.",
+    eyebrow: "For Specified Skilled Worker and Technical Intern visas",
+    title: "Find your career type in Japan",
+    subtitle: "Use your care or hospital experience to find hints for work style and salary growth in Japan.",
     startButton: "Try the type check",
     bubble: "Takes about 1 minute",
+  },
+  proof: {
+    item1: { label: "For", value: "SSW and Technical Intern workers" },
+    item2: { label: "Languages", value: "4 languages" },
+    item3: { label: "Consultation", value: "Messenger OK" },
   },
   quiz: { label: "Career type check", helper: "Choose by feeling", progress: "{current}/{total}" },
   calculating: {
@@ -26,10 +31,10 @@ export default {
     instruction: "When Messenger opens, please send: “My result was {level}.”",
   },
   trust: {
-    eyebrow: "First time is OK",
-    title: "A simple check to connect your experience to the next work style.",
-    copy: "We organize your care or hospital work experience, Japanese level, and preferences before consultation.",
-    item1: "Easy to answer",
+    eyebrow: "Made for SSW and Technical Intern workers",
+    title: "A simple check to connect your experience to your next job in Japan.",
+    copy: "We organize your care or hospital work experience, Japanese level, and preferences, then connect you to career consultation in Japan.",
+    item1: "Designed for work in Japan",
     item2: "Result appears immediately",
     item3: "Consult on Messenger",
   },

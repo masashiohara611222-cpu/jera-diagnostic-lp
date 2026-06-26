@@ -1,11 +1,16 @@
 export default {
   header: { language: "Bahasa" },
   hero: {
-    eyebrow: "Untuk pengalaman care dan rumah sakit",
-    title: "Apa tipe karier Anda?",
-    subtitle: "Jawab 5 pertanyaan untuk melihat petunjuk gaya kerja dan peluang penghasilan di Jepang.",
+    eyebrow: "Untuk Tokutei Ginou dan Magang Teknis",
+    title: "Cek tipe karier Anda di Jepang",
+    subtitle: "Gunakan pengalaman care atau rumah sakit untuk melihat petunjuk gaya kerja dan peluang penghasilan di Jepang.",
     startButton: "Coba cek tipe",
     bubble: "Bisa dicek 1 menit",
+  },
+  proof: {
+    item1: { label: "Untuk", value: "Tokutei Ginou / Magang Teknis" },
+    item2: { label: "Bahasa", value: "4 bahasa" },
+    item3: { label: "Konsultasi", value: "OK via Messenger" },
   },
   quiz: { label: "Cek tipe karier", helper: "Pilih dengan intuisi", progress: "{current}/{total}" },
   calculating: {
@@ -26,10 +31,10 @@ export default {
     instruction: "Saat Messenger terbuka, kirim pesan: “Hasil saya adalah {level}.”",
   },
   trust: {
-    eyebrow: "Pertama kali juga tidak apa-apa",
-    title: "Cek sederhana untuk menghubungkan pengalaman Anda ke cara kerja berikutnya.",
-    copy: "Kami merapikan pengalaman care atau rumah sakit, level bahasa Jepang, dan kondisi kerja yang Anda inginkan.",
-    item1: "Mudah dijawab",
+    eyebrow: "Khusus Tokutei Ginou dan Magang Teknis",
+    title: "Cek sederhana untuk menghubungkan pengalaman Anda ke pekerjaan berikutnya di Jepang.",
+    copy: "Kami merapikan pengalaman care atau rumah sakit, level bahasa Jepang, dan kondisi kerja yang Anda inginkan sebelum konsultasi karier di Jepang.",
+    item1: "Dirancang untuk bekerja di Jepang",
     item2: "Hasil langsung tampil",
     item3: "Bisa konsultasi via Messenger",
   },
